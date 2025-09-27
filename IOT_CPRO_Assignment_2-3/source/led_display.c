@@ -34,9 +34,9 @@ void LED_Control(void)
         break;
 
     case LED_WATERING:
-        // LED_Off(LED_RED_PORT, LED_RED_PIN);
+        LED_Off(LED_RED_PORT, LED_RED_PIN);
         LED_On(LED_YELLOW_PORT, LED_YELLOW_PIN);
-        //LED_Off(LED_GREEN_PORT, LED_GREEN_PIN);
+        LED_Off(LED_GREEN_PORT, LED_GREEN_PIN);
         break;
 
     case LED_ERROR:

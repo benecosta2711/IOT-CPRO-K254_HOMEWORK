@@ -19,6 +19,7 @@
 #include "timer.h"
 #include "button.h"
 #include "fsm_system.h"
+#include "notification.h"
 
 void SYSTEM_Init(void);
 
@@ -36,11 +37,13 @@ int main(void)
     SCH_Init(10);
 
     // 3. Đăng ký các task
-    SCH_Add(EMULATOR_Button,  NULL, 50);
+    
+    SCH_Add(EMULATOR_Sensor,  NULL, 50);
     SCH_Add(FSM_System,       NULL, 50);
     SCH_Add(EMULATOR_Pump,    NULL, 50);
     SCH_Add(EMULATOR_Led,     NULL, 50);
-    SCH_Add(EMULATOR_Sensor,  NULL, 50);
+    SCH_Add(EMULATOR_Button,  NULL, 50);
+    SCH_Add(EMULATOR_Notification, NULL, 500);
     // 4. Main loop
     while (1)
     {

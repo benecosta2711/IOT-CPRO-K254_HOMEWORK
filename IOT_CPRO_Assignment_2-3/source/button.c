@@ -51,19 +51,26 @@ bool BUTTON2_IsPressed(void)
 void EMULATOR_Button(void *arg)
 {
     (void)arg;
-    EMULATOR_ButtonSetOn(BUTTON1_PORT, BUTTON1_PIN);
+    static int i = 0;
+    if(i++%4)
+    {
     EMULATOR_ButtonSetOn(BUTTON2_PORT, BUTTON2_PIN);
+    }
+    else
+    {
+    EMULATOR_ButtonSetOn(BUTTON1_PORT, BUTTON1_PIN);
+    }
 }
 
 void EMULATOR_ButtonSetOn(GPIO_Type *gpio, int gpio_pin)
 {
-    for (int i = TIME_WRITE_BUTTON; i >= 0; i--){}
-    if(button1_is_pressed % 10 == 0 || button2_is_pressed % 40 == 0)
+    //for (int i = TIME_WRITE_BUTTON; i >= 0; i--){}
+    if(button1_is_pressed % 10 == 0 || button2_is_pressed % 25 == 0)
     {
     if (gpio == GPIOA)
     {
         gpio->DATA[gpio_pin] = 1;
-        printf("=======BUTTON 1 PRESSED=======\n");
+        printf("\n=======BUTTON 1 PRESSED=======\n");
 
         if (gpio == BUTTON1_PORT && gpio_pin == BUTTON1_PIN)
             EXCEPTION1_Callback();

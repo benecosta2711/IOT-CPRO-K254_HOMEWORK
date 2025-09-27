@@ -69,7 +69,7 @@ void EMULATOR_Temperature(GPIO_Type *gpio, uint8_t gpio_pin)
                 {
                     gpio->DATA[gpio_pin] = current_temp;
                 }
-                printf("Sensor Temperature sent data  %d C \n\n", current_temp);
+                printf("Sensor Temperature sent data  %d C \n", current_temp);
             }
         }
     }
@@ -80,7 +80,7 @@ void EMULATOR_Temperature(GPIO_Type *gpio, uint8_t gpio_pin)
         {
             gpio->DATA[gpio_pin] = 24;
         }
-        printf("Sensor Temperature sent data  %d C \n\n", 24);
+        printf("Sensor Temperature sent data  %d C \n", 24);
     }
 }
 
