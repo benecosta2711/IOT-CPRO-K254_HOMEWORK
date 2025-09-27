@@ -1,0 +1,5 @@
+# Logger started. min_level=6 (INFO)
+[2025-09-26 12:14:36] [INFO] [main.c:15] - System initialized (pid=1234)
+[2025-09-26 12:14:36] [DEBUG] [main.c:21] - Now debug logs are visible
+[2025-09-26 12:14:36] [ERROR] [main.c:26] - Failed to connect to database: code=-1001
+[2025-09-26 12:14:36] [WARNING] [main.c:31] - Battery low: 12%
