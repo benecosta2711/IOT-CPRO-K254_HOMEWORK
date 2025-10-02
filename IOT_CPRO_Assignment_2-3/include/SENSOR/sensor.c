@@ -1,16 +1,3 @@
-/**
- * @file    sensor.c
- * @author  [Tên bạn/nhóm]
- * @date    [yyyy-mm-dd]
- * @brief   Button driver implementation
- *
- * @details
- *  -
- *
- * @note
- *  -
- */
-
 #include "sensor.h"
 #include <stdio.h>
 
@@ -84,12 +71,12 @@ void EMULATOR_Temperature(GPIO_Type *gpio, uint8_t gpio_pin)
     }
 }
 
-void READ_SoilMoisture(SENSOR_Data *data_sensor, GPIO_Type *gpio, uint8_t gpio_pin)
+void READ_SoilMoisture(struct_sensor_data *data_sensor, GPIO_Type *gpio, uint8_t gpio_pin)
 {
-    data_sensor->soilMoisture = gpio->DATA[gpio_pin];
+    data_sensor->soil_moisture = gpio->DATA[gpio_pin];
 }
 
-void READ_Temperature(SENSOR_Data *data_sensor, GPIO_Type *gpio, uint8_t gpio_pin)
+void READ_Temperature(struct_sensor_data *data_sensor, GPIO_Type *gpio, uint8_t gpio_pin)
 {
     data_sensor->temperature = gpio->DATA[gpio_pin];
 }

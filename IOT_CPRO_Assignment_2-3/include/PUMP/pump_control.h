@@ -1,19 +1,3 @@
-/**
- * @file    pump_control.h
- * @author  [Tên bạn/nhóm]
- * @date    [yyyy-mm-dd]
- * @brief   Pump control driver header
- *
- * @details 
- *  - Cung cấp API để điều khiển bật/tắt bơm thông qua GPIO.
- *  - Hỗ trợ hàm giả lập `EMULATOR_PumpControl()` và `EMULATOR_Pump()` để kiểm thử trong môi trường không có phần cứng thật.
- *  - Dựa trên cấu trúc `GPIO_Type` được định nghĩa trong peripheral.h.
- *
- * @note 
- *  - Trong ứng dụng thực tế, cần khởi tạo GPIO đúng (input/output) trước khi gọi các hàm này.
- *  - Bơm được ánh xạ tới `PUMP_PORT` và `PUMP_PIN` trong peripheral.h.
- */
-
 #ifndef PUMPCONTROL_H_
 #define PUMPCONTROL_H_
 

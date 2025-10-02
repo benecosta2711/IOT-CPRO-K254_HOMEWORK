@@ -2,13 +2,13 @@
 
 static float s_sensor_moisture = 0;
 static float s_sensor_temp = 0;
-static OPERATION_Mode s_system_mode = 0;
-static PUMP_State s_pump_state = 0;
+static struct_operation_mode s_system_mode = 0;
+static struct_pump_state s_pump_state = 0;
 
 void EMULATOR_Notification(void *arg)
 {
     printf("Send data about System \n");
-    Notification_GetData(g_sensor_data, g_operation_mode, g_pump_sate);
+    NOTIFICATION_GetData(g_sensor_data, g_operation_mode, g_pump_sate);
     printf("Độ ẩm đất:%.2f \n Nhiệt độ: %.2f\n", s_sensor_moisture, s_sensor_temp);
     if(s_system_mode == MODE_AUTO)
     {
@@ -28,9 +28,9 @@ void EMULATOR_Notification(void *arg)
     }
 }
 
-void Notification_GetData(SENSOR_Data sensor_data, OPERATION_Mode system_mode, PUMP_State pump_state)
+void NOTIFICATION_GetData(struct_sensor_data sensor_data, struct_operation_mode system_mode, struct_pump_state pump_state)
 {
-    s_sensor_moisture = sensor_data.soilMoisture;
+    s_sensor_moisture = sensor_data.soil_moisture;
     s_sensor_temp     = sensor_data.temperature;
     s_system_mode     = system_mode;
     s_pump_state      = pump_state;

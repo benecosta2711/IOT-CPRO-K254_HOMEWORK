@@ -1,19 +1,3 @@
-/**
- * @file    led_display.h
- * @author  [Tên bạn/nhóm]
- * @date    [yyyy-mm-dd]
- * @brief   LED driver header
- *
- * @details 
- *  - Cung cấp API để điều khiển LED (bật, tắt, toggle).
- *  - Hỗ trợ hàm `LED_Control()` để điều khiển LED theo trạng thái hệ thống.
- *  - Có hàm `EMULATOR_Led()` để giả lập việc LED bật/tắt trên môi trường mô phỏng.
- *
- * @note 
- *  - LED được gán vào các GPIO pin định nghĩa trong `peripheral.h`.
- *  - Khi chạy trên phần cứng thật, cần cấu hình GPIO trước khi sử dụng các hàm này.
- */
-
 #ifndef LED_DISPLAY_H_
 #define LED_DISPLAY_H_
 

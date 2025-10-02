@@ -1,16 +1,3 @@
-/**
- * @file    sensor.h
- * @author  [Tên bạn/nhóm]
- * @date    [yyyy-mm-dd]
- * @brief   Button driver header
- *
- * @details 
- *  - 
- *
- * @note 
- *  -
- */
-
 #ifndef SENSOR_H_
 #define SENSOR_H_
 
@@ -43,7 +30,7 @@ void EMULATOR_Sensor(void *arg);
  * @param gpio con trỏ đến GPIO_Type
  * @param gpio_pin số thứ tự của pin trong port
  */
-void READ_SoilMoisture(SENSOR_Data *data_sensor, GPIO_Type *gpio, uint8_t gpio_pin);
+void READ_SoilMoisture(struct_sensor_data *data_sensor, GPIO_Type *gpio, uint8_t gpio_pin);
 
 /**
  * @brief Đọc dữ liệu của cảm biến nhiệt độ
@@ -51,6 +38,6 @@ void READ_SoilMoisture(SENSOR_Data *data_sensor, GPIO_Type *gpio, uint8_t gpio_p
  * @param gpio con trỏ đến GPIO_Type
  * @param gpio_pin số thứ tự của pin trong port
  */
-void READ_Temperature(SENSOR_Data *data_sensor, GPIO_Type *gpio, uint8_t gpio_pin);
+void READ_Temperature(struct_sensor_data *data_sensor, GPIO_Type *gpio, uint8_t gpio_pin);
 
 #endif /* SENSOR_H_ */

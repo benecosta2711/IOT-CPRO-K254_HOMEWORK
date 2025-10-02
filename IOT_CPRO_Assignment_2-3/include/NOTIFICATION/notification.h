@@ -1,21 +1,3 @@
-/**
- * @file    notification.h
- * @author  [Tên bạn/nhóm]
- * @date    [yyyy-mm-dd]
- * @brief   Notification (thông báo trạng thái) driver header
- *
- * @details
- *  - Cung cấp API để hiển thị hoặc gửi thông báo dựa trên dữ liệu cảm biến, 
- *    chế độ hệ thống và trạng thái bơm.
- *  - Hỗ trợ cả chế độ giả lập (emulation) để kiểm thử mà không cần phần cứng thực tế.
- *
- * @note
- *  - Module này chỉ thu thập dữ liệu và hiển thị/gửi thông báo, 
- *    không thực hiện điều khiển trực tiếp phần cứng.
- *  - Trong chế độ giả lập, hàm EMULATOR_Notification cho phép test logic báo hiệu 
- *    trên môi trường phần mềm.
- */
-
 #ifndef NOTIFICATION_H_
 #define NOTIFICATION_H_
 
@@ -45,6 +27,6 @@ void EMULATOR_Notification(void *arg);
  *    để cập nhật thông tin hiển thị/gửi đi.
  *  - Có thể dùng để hiển thị thông tin lên LCD, gửi qua UART, hoặc log ra console.
  */
-void Notification_GetData(SENSOR_Data sensor_data, OPERATION_Mode system_mode, PUMP_State pump_state);
+void NOTIFICATION_GetData(struct_sensor_data sensor_data, struct_operation_mode system_mode, struct_pump_state pump_state);
 
 #endif /* NOTIFICATION_H_ */

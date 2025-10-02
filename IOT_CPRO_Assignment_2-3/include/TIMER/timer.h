@@ -1,19 +1,3 @@
-/**
- * @file    timer.h
- * @author  [Tên bạn/nhóm]
- * @date    [yyyy-mm-dd]
- * @brief   Simple timer scheduler emulation
- *
- * @details
- *  - Cung cấp scheduler đơn giản dựa trên tick định kỳ.
- *  - Cho phép đăng ký nhiều task chạy theo chu kỳ (periodic task).
- *  - Các task được gọi tuần tự trong vòng lặp chính (cooperative scheduling).
- *
- * @note
- *  - Đây là phiên bản mô phỏng, không chính xác tuyệt đối như hardware timer.
- *  - Dùng để test logic hoặc giả lập hành vi thời gian thực trong môi trường phần mềm.
- */
-
 #ifndef TIMER_H_
 #define TIMER_H_
 

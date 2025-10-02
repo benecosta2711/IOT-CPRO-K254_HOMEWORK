@@ -1,16 +1,3 @@
-/**
- * @file    led_dispaly.c
- * @author  [Tên bạn/nhóm]
- * @date    [yyyy-mm-dd]
- * @brief   Button driver implementation
- *
- * @details
- *  -
- *
- * @note
- *  .
- */
-
 #include "led_display.h"
 
 void LED_On(GPIO_Type *gpio, int gpio_pin) { gpio->DATA[gpio_pin] = 1; }

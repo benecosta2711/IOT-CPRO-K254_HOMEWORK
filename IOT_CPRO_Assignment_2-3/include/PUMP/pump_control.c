@@ -1,16 +1,3 @@
-/**
- * @file    pump_control.c
- * @author  [Tên bạn/nhóm]
- * @date    [yyyy-mm-dd]
- * @brief   Button driver implementation
- *
- * @details
- *  -
- *
- * @note
- *  -
- */
-
 #include "pump_control.h"
 
 void turn_pump_on(GPIO_Type *gpio, int gpio_pin)

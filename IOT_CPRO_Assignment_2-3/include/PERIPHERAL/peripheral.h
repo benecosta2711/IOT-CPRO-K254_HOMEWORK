@@ -1,20 +1,3 @@
-/**
- * @file    peripheral.h
- * @author  [Tên bạn/nhóm]
- * @date    [yyyy-mm-dd]
- * @brief   Peripheral abstraction layer (GPIO, LED, Button, Pump, Sensor)
- *
- * @details 
- *  - Cung cấp lớp trừu tượng (abstraction) cho các peripheral cơ bản: LED, Button, Pump, Sensor.
- *  - Định nghĩa cấu trúc dữ liệu mô phỏng thanh ghi PORT và GPIO.
- *  - Cấu hình ánh xạ các chân GPIO cho LED, Button, Pump, Sensor trong chế độ giả lập.
- *  - Cung cấp API cơ bản để khởi tạo và điều khiển GPIO.
- *
- * @note 
- *  - Đây là code giả lập, KHÔNG ánh xạ trực tiếp tới thanh ghi thật của MCU.
- *  - Nếu muốn mô phỏng thêm peripheral khác (UART, ADC, PWM...), cần mở rộng thêm struct và API tương ứng.
- */
-
 #ifndef PERIPHERAL_H_
 #define PERIPHERAL_H_
 

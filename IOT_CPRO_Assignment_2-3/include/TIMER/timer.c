@@ -1,21 +1,3 @@
-/**
- * @file    timer.c
- * @author  [Tên bạn/nhóm]
- * @date    [yyyy-mm-dd]
- * @brief   Simple timer emulation
- *
- * @details
-* API khớp với timers.h tối giản:
- *   - SCH_Init(tick_ms)
- *   - SCH_Add(fn, arg, period_ms)
- *   - SCH_Tick()
- *   - SCH_RunPending()
- *
- * @note
- *  - Đây chỉ là mô phỏng, không có độ chính xác như hardware timer.
- *  - Có thể dùng để test logic (ví dụ: nút nhấn sau 100 tick).
- */
-
 #include "timer.h"
 #include <string.h> 
 #include <stddef.h> 
@@ -27,7 +9,7 @@
 static SchedTask g_tasks[SCH_MAX_TASKS];
 static uint32_t g_tick_ms = 1; 
 
-static int sch_find_free_slot(void)
+static int SCH_FineFreeSlot(void)
 {
     for (int i = 0; i < SCH_MAX_TASKS; ++i)
     {
@@ -49,7 +31,7 @@ int SCH_Add(TaskFn fn, void *arg, uint32_t period_ms)
 {
     if (!fn || period_ms == 0)
         return -1;
-    int id = sch_find_free_slot();
+    int id = SCH_FineFreeSlot();
     if (id < 0)
         return -1;
 
