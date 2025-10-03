@@ -71,12 +71,12 @@ void EMULATOR_Temperature(GPIO_Type *gpio, uint8_t gpio_pin)
     }
 }
 
-void READ_SoilMoisture(struct_sensor_data *data_sensor, GPIO_Type *gpio, uint8_t gpio_pin)
+void READ_SoilMoisture(SensorData_t *data_sensor, GPIO_Type *gpio, uint8_t gpio_pin)
 {
-    data_sensor->soil_moisture = gpio->DATA[gpio_pin];
+    data_sensor->soilMoisturePercent = gpio->DATA[gpio_pin];
 }
 
-void READ_Temperature(struct_sensor_data *data_sensor, GPIO_Type *gpio, uint8_t gpio_pin)
+void READ_Temperature(SensorData_t *data_sensor, GPIO_Type *gpio, uint8_t gpio_pin)
 {
-    data_sensor->temperature = gpio->DATA[gpio_pin];
+    data_sensor->airTemperatureCelsius = gpio->DATA[gpio_pin];
 }

@@ -2,8 +2,8 @@
 
 static float s_sensor_moisture = 0;
 static float s_sensor_temp = 0;
-static struct_operation_mode s_system_mode = 0;
-static struct_pump_state s_pump_state = 0;
+static SystemMode_t s_system_mode = 0;
+static PumpState_t s_pump_state = 0;
 
 void EMULATOR_Notification(void *arg)
 {
@@ -28,10 +28,10 @@ void EMULATOR_Notification(void *arg)
     }
 }
 
-void NOTIFICATION_GetData(struct_sensor_data sensor_data, struct_operation_mode system_mode, struct_pump_state pump_state)
+void NOTIFICATION_GetData(SensorData_t sensor_data, SystemMode_t system_mode, PumpState_t pump_state)
 {
-    s_sensor_moisture = sensor_data.soil_moisture;
-    s_sensor_temp     = sensor_data.temperature;
+    s_sensor_moisture = sensor_data.soilMoisturePercent;
+    s_sensor_temp     = sensor_data.airTemperatureCelsius;
     s_system_mode     = system_mode;
     s_pump_state      = pump_state;
 }

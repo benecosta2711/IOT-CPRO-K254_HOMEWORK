@@ -39,7 +39,7 @@ void FSM_System(void *arg)
     }
     else
     {
-        if (g_sensor_data.soil_moisture < MIN_SOIL_MOISTURE)
+        if (g_sensor_data.soilMoisturePercent < MIN_SOIL_MOISTURE)
         {
             g_led_state = LED_LOW_MOISTURE_ALERT;
         }
@@ -75,7 +75,7 @@ void FSM_System(void *arg)
         BUTTON2_IsPressed();
         if (g_pump_sate == PUMP_OFF)
         {
-            if (g_sensor_data.soil_moisture < MIN_SOIL_MOISTURE)
+            if (g_sensor_data.soilMoisturePercent < MIN_SOIL_MOISTURE)
             {
                 PUMP_TurnOn(PUMP_PORT, PUMP_PIN);
                 g_count_pump_time = 3;
@@ -84,7 +84,7 @@ void FSM_System(void *arg)
         }
         else
         {
-            if (g_sensor_data.soil_moisture >= MAX_SOIL_MOISTURE)
+            if (g_sensor_data.soilMoisturePercent >= MAX_SOIL_MOISTURE)
             {
                 PUMP_OffCallback();
             }

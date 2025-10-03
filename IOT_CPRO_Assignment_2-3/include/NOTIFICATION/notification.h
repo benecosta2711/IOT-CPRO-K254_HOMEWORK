@@ -12,6 +12,6 @@ void EMULATOR_Notification(void *arg);
 /**
  * @brief Lấy dữ liệu hiện tại để phục vụ việc thông báo.
  */
-void NOTIFICATION_GetData(struct_sensor_data sensor_data, struct_operation_mode system_mode, struct_pump_state pump_state);
+void NOTIFICATION_GetData(SensorData_t sensor_data, SystemMode_t system_mode, PumpState_t pump_state);
 
 #endif /* NOTIFICATION_H_ */
