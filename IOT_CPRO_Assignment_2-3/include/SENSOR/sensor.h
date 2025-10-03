@@ -1,8 +1,8 @@
 #ifndef SENSOR_H_
 #define SENSOR_H_
 
-#include "common.h"
-#include "peripheral.h"
+#include "COMMON/common.h"
+#include "PERIPHERAL/peripheral.h"
 
 // --- Function Prototypes ---
 /**

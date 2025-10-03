@@ -1,7 +1,7 @@
 #ifndef PERIPHERAL_H_
 #define PERIPHERAL_H_
 
-#include "common.h"
+#include "COMMON/common.h"
 
 #define NUM_PIN 7   
 

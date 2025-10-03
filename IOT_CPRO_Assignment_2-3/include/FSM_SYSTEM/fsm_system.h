@@ -1,12 +1,12 @@
 #ifndef FSM_SYSTEM_H_
 #define FSM_SYSTEM_H_
 
-#include "common.h"
-#include "sensor.h"
-#include "led_display.h"
-#include "button.h"
-#include "timer.h"
-#include "pump_control.h"
+#include "COMMON/common.h"
+#include "SENSOR/sensor.h"
+#include "LED_DISPLAY/led_display.h"
+#include "BUTTON/button.h"
+#include "TIMER/timer.h"
+#include "PUMP/pump_control.h"
 
 /**
  * @brief Hàm chính của FSM hệ thống.

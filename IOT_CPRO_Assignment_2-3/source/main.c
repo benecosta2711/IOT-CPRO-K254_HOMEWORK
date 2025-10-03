@@ -1,12 +1,12 @@
-#include "common.h"
-#include "peripheral.h"
-#include "sensor.h"
-#include "pump_control.h"
-#include "led_display.h"
-#include "timer.h"
-#include "button.h"
-#include "fsm_system.h"
-#include "notification.h"
+#include "COMMON/common.h"
+#include "PERIPHERAL/peripheral.h"
+#include "SENSOR/sensor.h"
+#include "PUMP/pump_control.h"
+#include "LED_DISPLAY/led_display.h"
+#include "TIMER/timer.h"
+#include "BUTTON/button.h"
+#include "FSM_SYSTEM/fsm_system.h"
+#include "NOTIFICATION/notification.h"
 
 void SYSTEM_Init(void);
 
@@ -55,5 +55,5 @@ void SYSTEM_Init(void)
     LED_Off(LED_GREEN_PORT, LED_GREEN_PIN);
 
     // --- Set PUMP off ---
-    turn_pump_off(PUMP_PORT, PUMP_PIN);
+    PUMP_TurnOff(PUMP_PORT, PUMP_PIN);
 }

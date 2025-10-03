@@ -1,8 +1,8 @@
 #ifndef PUMPCONTROL_H_
 #define PUMPCONTROL_H_
 
-#include "common.h"
-#include "peripheral.h"
+#include "COMMON/common.h"
+#include "PERIPHERAL/peripheral.h"
 #include "stdbool.h"
 
 /**

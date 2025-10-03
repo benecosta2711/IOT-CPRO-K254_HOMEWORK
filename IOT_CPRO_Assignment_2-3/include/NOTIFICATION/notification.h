@@ -1,8 +1,8 @@
 #ifndef NOTIFICATION_H_
 #define NOTIFICATION_H_
 
-#include "common.h"
-#include "sensor.h"
+#include "COMMON/common.h"
+#include "SENSOR/sensor.h"
 
 /**
  * @brief Hàm giả lập việc gửi/thể hiện thông báo.

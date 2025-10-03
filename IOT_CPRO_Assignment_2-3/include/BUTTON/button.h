@@ -3,8 +3,8 @@
 #define BUTTON_H_
 
 #include "stdbool.h"
-#include "common.h"
-#include "peripheral.h"
+#include "COMMON/common.h"
+#include "PERIPHERAL/peripheral.h"
 
 /**
  * @brief Callback xử lý khi nút nhấn số 1 được phát hiện và set flag

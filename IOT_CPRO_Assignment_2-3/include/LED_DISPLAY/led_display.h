@@ -1,8 +1,8 @@
 #ifndef LED_DISPLAY_H_
 #define LED_DISPLAY_H_
 
-#include "common.h"
-#include "peripheral.h"
+#include "COMMON/common.h"
+#include "PERIPHERAL/peripheral.h"
 
 /**
  * @brief Bật LED tại một GPIO pin.

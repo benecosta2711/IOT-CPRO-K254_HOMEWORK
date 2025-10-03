@@ -5,7 +5,7 @@ static int g_count_pump_time = 0;
 
 void PUMP_OffCallback(void)
 {
-    turn_pump_off(PUMP_PORT, PUMP_PIN);
+    PUMP_TurnOff(PUMP_PORT, PUMP_PIN);
     g_pump_sate = PUMP_OFF;
     g_count_pump_time = 0;
 }
@@ -77,7 +77,7 @@ void FSM_System(void *arg)
         {
             if (g_sensor_data.soil_moisture < MIN_SOIL_MOISTURE)
             {
-                turn_pump_on(PUMP_PORT, PUMP_PIN);
+                PUMP_TurnOn(PUMP_PORT, PUMP_PIN);
                 g_count_pump_time = 3;
                 g_pump_sate = PUMP_ON;
             }
@@ -99,7 +99,7 @@ void FSM_System(void *arg)
         {
             if (g_pump_sate == PUMP_OFF)
             {
-                turn_pump_on(PUMP_PORT, PUMP_PIN);
+                PUMP_TurnOn(PUMP_PORT, PUMP_PIN);
                 g_pump_sate = PUMP_ON;
                 g_count_pump_time = 3;
             }
