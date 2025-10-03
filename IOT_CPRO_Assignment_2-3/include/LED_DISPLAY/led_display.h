@@ -33,8 +33,6 @@ void LED_Control(void);
 
 /**
  * @brief Giả lập LED (in trạng thái LED ra console).
- * @param gpio     Con trỏ đến GPIO_Type.
- * @param gpio_pin Vị trí pin của LED (1 = RED, 2 = YELLOW, 3 = GREEN).
  */
 void EMULATOR_LedUpdate(GPIO_Type *gpio, int gpio_pin);
 

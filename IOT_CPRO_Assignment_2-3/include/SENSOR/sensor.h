@@ -7,15 +7,11 @@
 // --- Function Prototypes ---
 /**
  * @brief Giả lập cảm biến độ ẩm load data vào chân gpio pin
- * @param gpio  Con trỏ đến GPIO_Type
- * @param gpio_pin Số thứ tự pin trong port
  */
 void EMULATOR_SoilMoisture(GPIO_Type *gpio, uint8_t gpio_pin);
 
 /**
  * @brief Giả lập cảm biến độ ẩm load data vào chân gpio pin
- * @param gpio  Con trỏ đến GPIO_Type
- * @param gpio_pin Số thứ tự pin trong port
  */
 void EMULATOR_Temperature(GPIO_Type *gpio, uint8_t gpio_pin);
 

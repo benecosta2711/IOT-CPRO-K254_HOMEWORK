@@ -10,9 +10,7 @@
 
 /**
  * @brief Hàm chính của FSM hệ thống.
- *
  * @param arg  Tham số tuỳ chọn (có thể là NULL hoặc con trỏ tới struct context).
- *
  * @details
  *  - Được gọi định kỳ trong vòng lặp chính hoặc scheduler.
  *  - Quản lý các chế độ hoạt động (MODE_IDLE, MODE_AUTO, MODE_MANUAL, ...).

@@ -1,16 +1,16 @@
 #include "pump_control.h"
 
-void turn_pump_on(GPIO_Type *gpio, int gpio_pin)
+void PUMP_TurnOn(GPIO_Type *gpio, int gpio_pin)
 {
     gpio->DATA[gpio_pin] = 1;
 }
 
-void turn_pump_off(GPIO_Type *gpio, int gpio_pin)
+void PUMP_TurnOff(GPIO_Type *gpio, int gpio_pin)
 {
     gpio->DATA[gpio_pin] = 0;
 }
 
-bool get_pump_mode(GPIO_Type *gpio, int gpio_pin)
+bool PUMP_GetMode(GPIO_Type *gpio, int gpio_pin)
 {
     if (gpio->DATA[gpio_pin] == 1)
     {
