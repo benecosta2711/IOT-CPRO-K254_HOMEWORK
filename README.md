@@ -1,7 +1,4 @@
-```markdown
-# Logger Utility for C Applications
 
-```
 ## Cấu trúc thư mục
 
 project/
