@@ -42,17 +42,6 @@ project/
 
 ---
 
-**Kết quả console:**
-
-```
-[2025-10-04 21:45:12] [INFO] [main.c:8] - System initialized (pid=1234)
-[2025-10-04 21:45:12] [DEBUG] [main.c:11] - Now debug logs are visible
-[2025-10-04 21:45:12] [ERROR] [main.c:14] - Failed to connect to database: code=-1001
-[2025-10-04 21:45:12] [WARNING] [main.c:17] - Battery low: 12%
-```
-
----
-
 ## Build & Run
 
 ### 1 Biên dịch:
@@ -74,3 +63,13 @@ cat app.log
 ```
 ---
 
+**Kết quả console:**
+
+```
+[2025-10-04 21:45:12] [INFO] [main.c:8] - System initialized (pid=1234)
+[2025-10-04 21:45:12] [DEBUG] [main.c:11] - Now debug logs are visible
+[2025-10-04 21:45:12] [ERROR] [main.c:14] - Failed to connect to database: code=-1001
+[2025-10-04 21:45:12] [WARNING] [main.c:17] - Battery low: 12%
+```
+
+---
