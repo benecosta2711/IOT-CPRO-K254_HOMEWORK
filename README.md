@@ -60,35 +60,6 @@ project/
 
 ---
 
-## Ví dụ sử dụng
-
-```c
-#include "logger.h"
-
-int connect_db(void) { return -1; }
-
-int main(void) {
-    if (logger_init(LOG_INFO, "app.log", /*append=*/false) != 0) {
-        fprintf(stderr, "Failed to initialize logger file. Continue with console only.\n");
-    }
-
-    LOG_INFO("System initialized (pid=%d)", 1234);
-    LOG_DEBUG("This debug should NOT appear since min_level is INFO");
-
-    logger_set_level(LOG_DEBUG);
-    LOG_DEBUG("Now debug logs are visible");
-
-    if (connect_db() < 0) {
-        LOG_ERR("Failed to connect to database: code=%d", -1001);
-    }
-
-    LOG_WARN("Battery low: %d%%", 12);
-
-    logger_shutdown();
-    return 0;
-}
-````
-
 **Kết quả console:**
 
 ```
@@ -97,39 +68,6 @@ int main(void) {
 [2025-10-04 21:45:12] [ERROR] [main.c:14] - Failed to connect to database: code=-1001
 [2025-10-04 21:45:12] [WARNING] [main.c:17] - Battery low: 12%
 ```
-
----
-
-## API chi tiết
-
-### `int logger_init(log_level_t min_level, const char *file_path, bool append)`
-
-Khởi tạo hệ thống log.
-
-* `min_level`: mức log nhỏ nhất được in ra.
-* `file_path`: đường dẫn file log (NULL hoặc chuỗi rỗng nếu chỉ log ra console).
-* `append`: `true` → ghi nối tiếp; `false` → ghi mới (xóa cũ).
-
-### `void logger_set_level(log_level_t min_level)`
-
-Thay đổi mức log tối thiểu khi chương trình đang chạy.
-
-### `log_level_t logger_get_level(void)`
-
-Trả về mức log hiện tại.
-
-### `void logger_shutdown(void)`
-
-Đóng file log và flush dữ liệu ra đĩa.
-
----
-
-## Đặc điểm nổi bật
-
-* Ghi log an toàn cho **đa luồng POSIX** (dùng `localtime_r` khi có).
-* Tự động flush dữ liệu để tránh mất log khi crash.
-* Hỗ trợ cả **stdout/stderr** và **file log** song song.
-* Dễ mở rộng sang gửi log qua UART, Syslog hoặc MQTT.
 
 ---
 
@@ -152,34 +90,5 @@ gcc main.c logger.c -o app
 ```bash
 cat app.log
 ```
-
 ---
 
-## Mở rộng (Gợi ý)
-
-Bạn có thể:
-
-* Thêm **timestamp theo microsecond** bằng `gettimeofday()`.
-* Thêm **thread ID** để debug đa luồng.
-* Gửi log tới **Syslog**, **MQTT broker**, hoặc **UDP server**.
-
----
-
-## Giấy phép
-
-MIT License © 2025 – Tác giả.
-
----
-
-## Tác giả
-
-**Tên:** (điền của bạn)
-**Email:** (nếu có)
-**Mô tả:** Dự án logger C lightweight, dễ tích hợp cho ứng dụng nhúng hoặc Linux nhỏ.
-
-```
-
----
-
-Bạn có muốn mình tạo thêm **sơ đồ luồng xử lý (flowchart)** của logger — từ `LOG_INFO()` → `logger_log_impl()` → `write_to_console()` → file — để bạn gắn vào README không?
-```
