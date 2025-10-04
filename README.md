@@ -10,7 +10,7 @@ Chương trình được tổ chức theo kiến trúc module hóa, dễ dàng m
 
 ---
 
-## 📂 Cấu trúc thư mục
+## Phần 1: Cấu trúc thư mục
 IOT_CPRO_Assignment_2-3/
 
 │── include/ # Chứa thư viện hỗ trợ (module con)
@@ -49,7 +49,7 @@ IOT_CPRO_Assignment_2-3/
 
 ---
 
-## 🚀 Build & Run
+## Phần 2: Build & Run
 
 ### 1. Build bằng gcc
 ```bash
