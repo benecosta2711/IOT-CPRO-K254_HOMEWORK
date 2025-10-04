@@ -4,10 +4,14 @@
 project/
 
 │
+
 ├── logger.h # Header khai báo hàm và macro tiện ích
-   ├── logger.c # Triển khai logic ghi log
-   ├── main.c # Chương trình mẫu minh họa cách sử dụng
-   └── README.md # Tài liệu hướng dẫn
+
+├── logger.c # Triển khai logic ghi log
+
+├── main.c # Chương trình mẫu minh họa cách sử dụng
+   
+└── README.md # Tài liệu hướng dẫn
 ---
 ## Cách hoạt động
 1. **Khởi tạo logger** với `logger_init()`:
