@@ -24,8 +24,6 @@ project/
 ├── main.c             # Chương trình mẫu minh họa cách sử dụng
 └── README.md          # Tài liệu hướng dẫn
 
-````
-
 ---
 
 ## Cách hoạt động
