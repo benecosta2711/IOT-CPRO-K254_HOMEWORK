@@ -1,21 +1,8 @@
 ```markdown
 # Logger Utility for C Applications
 
-## Giới thiệu
-`logger` là một **thư viện ghi log đơn giản và linh hoạt** cho ứng dụng C/C++.  
-Nó hỗ trợ:
-- Ghi log ra **console (stdout / stderr)**.  
-- Ghi log ra **file** (với tùy chọn ghi nối tiếp hoặc ghi mới).  
-- Quản lý **mức độ log (log level)** để kiểm soát chi tiết thông tin hiển thị.  
-- Ghi kèm **timestamp**, **tên file**, **số dòng**, và **mức độ log**.  
-
-> Mục tiêu: dễ tích hợp, gọn nhẹ, hoạt động được trên cả **Linux** và **Embedded Linux**.
-
----
-
-## Cấu trúc thư mục
-
 ```
+## Cấu trúc thư mục
 
 project/
 │
