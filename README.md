@@ -25,23 +25,6 @@ project/
 
 ---
 
-## Mức độ log (log levels)
-
-| Mức | Macro | Ý nghĩa |
-|------|--------|----------|
-| 0 | `LOG_EMERG` | Hệ thống không thể sử dụng |
-| 1 | `LOG_ALERT` | Cần hành động khẩn cấp |
-| 2 | `LOG_CRIT` | Lỗi nghiêm trọng |
-| 3 | `LOG_ERR` | Lỗi thông thường |
-| 4 | `LOG_WARN` | Cảnh báo |
-| 5 | `LOG_NOTICE` | Thông báo quan trọng |
-| 6 | `LOG_INFO` | Thông tin chung |
-| 7 | `LOG_DEBUG` | Thông tin gỡ lỗi chi tiết |
-
-> Mức log càng cao → log càng chi tiết.
-
----
-
 ## Build & Run
 
 ### 1 Biên dịch:
@@ -63,7 +46,7 @@ cat app.log
 ```
 ---
 
-**Kết quả console:**
+### 4 Kết quả console:
 
 ```
 [2025-10-04 21:45:12] [INFO] [main.c:8] - System initialized (pid=1234)
