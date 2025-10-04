@@ -1,10 +1,5 @@
 # README.md
 ## Smart Plant Watering System (SPWS)
-```markdown
-Hệ thống tưới cây tự động thông minh chạy mô phỏng trên PC (gcc).  
-Kiến trúc module rõ ràng, dễ dàng thay thế lớp HAL để triển khai trên phần cứng thật.
-```
-
 Project mô phỏng một hệ thống IoT cơ bản: thu thập dữ liệu từ cảm biến, xử lý bằng Finite State Machine (FSM), điều khiển bơm và LED hiển thị.  
 Chương trình được tổ chức theo kiến trúc module hóa, dễ dàng mở rộng và bảo trì.
 
