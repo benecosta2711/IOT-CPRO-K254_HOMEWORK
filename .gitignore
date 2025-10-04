@@ -1,0 +1,26 @@
+# Ignore binary executable
+memory_lab
+
+# Ignore object files, libraries, and compiled binaries
+*.o
+*.out
+*.exe
+*.a
+*.so
+
+# Ignore core dumps
+core
+*.core
+
+# Ignore GDB history files
+.gdb_history
+
+# Ignore temporary files
+*~
+*.swp
+*.log
+
+# Ignore build directories
+/build/
+/bin/
+/obj/
