@@ -1,3 +1,0 @@
-# Bỏ qua chỉ các file .o và .exe trong app
-app/*.o
-app/*.exe
