@@ -1,8 +1,8 @@
-#include "config.h"
-#include "spws_controller.h"
-#include "hal_sensors.h"
-#include "hal_actuators.h"
-#include "hal_buttons.h"
+#include "CONFIG/config.h"
+#include "SPWS_CONTROLLER/spws_controller.h"
+#include "HAL_SENSORS/hal_sensors.h"
+#include "HAL_ACTUATORS/hal_actuators.h"
+#include "HAL_BUTTONS/hal_buttons.h"
 #include <unistd.h>
 #include <stdlib.h>
 

@@ -1,7 +1,7 @@
 #ifndef HAL_SENSORS_H
 #define HAL_SENSORS_H
 
-#include "config.h"
+#include "CONFIG/config.h"
 
 void HAL_SENS_Init(void);
 
