@@ -1,11 +1,11 @@
 #include "hal_sensors.h"
 
 // moisture 50%, temp 27°
-static SensorData_t g_sensor = {50.0f, 27.0f};
+static SensorData_t g_sensor;
 
 void HAL_SENS_Init(void)
 {
-    // có thể seed random
+    g_sensor = (SensorData_t){50.0f, 27.0f};
 }
 
 void HAL_SENS_Read(SensorData_t *out)

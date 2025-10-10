@@ -49,7 +49,7 @@ int main(int argc, char **argv)
          cfg.manualWateringDuration_s, cfg.sensorReadInterval_s,
          cfg.maxWateringDuration_s);
 
-    LOGF("Controls: type 'a'+Enter to toggle AUTO/MANUAL, 'm'+Enter manual water, Ctrl+C to quit.");
+    //LOGF("Controls: type 'a'+Enter to toggle AUTO/MANUAL, 'm'+Enter manual water, Ctrl+C to quit.");
 
     System_Init(cfg);
 

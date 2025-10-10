@@ -1,8 +1,0 @@
-{
-    "files.associations": {
-        "spws_controller.h": "c",
-        "hal_sensors.h": "c",
-        "hal_actuators.h": "c",
-        "hal_buttons.h": "c"
-    }
-}

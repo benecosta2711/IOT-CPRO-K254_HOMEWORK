@@ -1,7 +1,7 @@
 #include "hal_actuators.h"
 
-static LedState_t s_led = LED_NORMAL;
-static PumpState_t s_pump = PUMP_OFF;
+static LedState_t s_led;
+static PumpState_t s_pump;
 
 void HAL_ACT_Init(void)
 {

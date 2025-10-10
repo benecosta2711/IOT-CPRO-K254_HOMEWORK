@@ -3,8 +3,8 @@
 
 #define TIME_COUNT 20
 
-static int s_toggle = 0;
-static int s_manual = 0;
+static int s_toggle = -1;
+static int s_manual = -1;
 
 // Mô phỏng button bằng bàn phím, chương trình bị chặn
 static void ReadLine(void)
@@ -22,7 +22,10 @@ static void ReadLine(void)
     }
 }
 
-void HAL_BTN_Init(void) {}
+void HAL_BTN_Init(void) {
+    s_toggle = 0;
+    s_manual = 0;
+}
 
 static int count_random = 0;
 
